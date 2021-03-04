@@ -79,9 +79,9 @@ function App(props) {
         }
     ]);
 
-    const setBought = () => {
-        const newDatabase = props.database.map((item, index) => {
-            if (item.id === false) {
+    const setBought = (id) => {
+        const newDatabase = database.map((item) => {
+            if (item.id === id) {
                 return {
                     ...item,
                     bought: !item.bought
@@ -92,8 +92,10 @@ function App(props) {
         });
 
 
-        props.setDatabase(newDatabase);
+        setDatabase(newDatabase);
     }
+
+
 
   return (
       <div className="app">

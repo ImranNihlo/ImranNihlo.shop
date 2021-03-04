@@ -14,7 +14,9 @@ function Card(props) {
                 <div className="card-name">{props.product.name}</div>
                 <div className="card-rating">{props.product.rating}</div>
                 <div className="card-price">{props.product.price} ₽</div>
-                <Button />
+                <Button setBought={props.setBought}
+                        id={props.product.id}
+                        bought={props.product.bought}/>
             </div>
         </div>
     );

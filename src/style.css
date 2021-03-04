@@ -481,7 +481,12 @@ button.btn {
     cursor: pointer;
 }
 
-.btn[disabled] {
+.disabled {
+    border: none;
+    border-radius: 3px;
+
+    padding: 10px;
+    color: #fff;
     cursor: default;
     background-color: #00339999;
 }
